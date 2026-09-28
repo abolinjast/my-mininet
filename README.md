@@ -24,7 +24,11 @@ When `mininet.qcow2` is not already in the current directory, it converts the vm
 qemu-system-x86_64 -enable-kvm -m 2048 -smp 2 -drive file=mininet.qcow2,format=qcow2 -netdev user,id=n1,hostfwd=tcp::2222-:22 -device e1000,netdev=n1 -display gtk
 ```
 
-After the VM boots, SSH in:
+After the VM boots, the GTK console looks like this. Login there is `mininet` / `mininet`. `eth0` comes up as `10.0.2.15/24`.
+
+![QEMU console after the Mininet VM boots](qemu-console.jpg)
+
+SSH in:
 
 ```bash
 ssh -p 2222 mininet@localhost
