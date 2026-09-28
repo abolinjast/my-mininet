@@ -6,7 +6,9 @@ The guest image is Ubuntu 18.04.5, Mininet 2.3.0, Python 3.6.9. Login is `minine
 
 ## Host
 
-Run this on the host, from the directory where you want `mininet.qcow2`. The argument is the `.vmdk` from the Mininet VM zip. The `.ovf` in that zip is unused.
+Download the VM from the [Mininet GitHub releases](https://github.com/mininet/mininet/releases). This setup uses the Ubuntu 18.04.5 image on the 2.3.0 release, `mininet-2.3.0-210211-ubuntu-18.04.5-server-amd64-ovf.zip`. Unzip it and pass the `.vmdk` to the script below. The `.ovf` in that zip is unused.
+
+Run this on the host, from the directory where you want `mininet.qcow2`.
 
 ```bash
 ./host-setup-qemu-mininet.sh /path/to/mininet-vm-x86_64.vmdk
